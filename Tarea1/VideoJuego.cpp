@@ -10,7 +10,7 @@ private:
     bool enEjecucion;
 
 public:
-    // Constructor
+    //este es el constructor
     VideoJuego(string _nombre, string _genero, int _nivel) {
         nombre = _nombre;
         genero = _genero;
@@ -18,13 +18,13 @@ public:
         enEjecucion = false;
     }
 
-    // Método para jugar
+    //definiendo el metodo para jugar
     void jugar() {
         enEjecucion = true;
-        cout << "Jugando " << nombre << " del genero " << genero << "..." << endl;
+        cout << "Jugando " << nombre << " del genero " << genero << "." << endl;
     }
 
-    // Método para subir de nivel
+    //este es el metodo para subir de nivel
     void subirNivel() {
         if (enEjecucion) {
             nivel++;
@@ -34,19 +34,19 @@ public:
         }
     }
 
-    // Método adicional 1: pausar el juego
+    //metodo para pausar el juego
     void pausarJuego() {
         enEjecucion = false;
         cout << "El juego ha sido pausado." << endl;
     }
 
-    // Método adicional 2: mostrar estado del juego
+    //metodo para mostrar el estado del juego
     void mostrarEstado() {
         cout << "Estado del juego: "
-             << (enEjecucion ? "En ejecucion" : "Pausado") << endl;
+            << (enEjecucion ? "En ejecucion" : "Pausado") << endl;
     }
 
-    // Mostrar información completa
+    //metodo para mostrar toda la informacion 
     void mostrarInfo() {
         cout << "Nombre: " << nombre << endl;
         cout << "Genero: " << genero << endl;
@@ -57,23 +57,25 @@ public:
 };
 
 int main() {
-    // Dos instancias diferentes
-    VideoJuego juego1("Elden Ring", "RPG", 5);
-    VideoJuego juego2("FIFA 24", "Deportes", 2);
+    //instancias
+    VideoJuego juego1("Fortnite", "Supervivencia", 8);
+    VideoJuego juego2("Rocket League", "Racing", 3);
 
-    // Probar métodos del primer juego
+    //probando metodos del juego1
     juego1.mostrarInfo();
     juego1.jugar();
     juego1.subirNivel();
     juego1.pausarJuego();
     juego1.mostrarInfo();
 
-    // Probar métodos del segundo juego
+    //probando metodos del juego2
     juego2.mostrarInfo();
     juego2.jugar();
     juego2.subirNivel();
     juego2.subirNivel();
     juego2.mostrarInfo();
+
+    //todo salio bien xd
 
     return 0;
 }
